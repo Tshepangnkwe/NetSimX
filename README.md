@@ -1,13 +1,13 @@
 # 🌐 NetSimX
 
-> **Advanced Network Topology Design & Simulation Platform** | *Bridging Theory with Real-World Implementation*
+> **Network Topology Design & Simulation Project** | *CMPG 325 Computer Networks Individual Assignment*
 
 [![Cisco Packet Tracer](https://img.shields.io/badge/Built%20with-Cisco%20Packet%20Tracer-1BA0D7?style=flat-square&logo=cisco)](https://www.netacad.com/courses/packet-tracer)
 [![Network Protocols](https://img.shields.io/badge/Protocols-IPv4%20%7C%20IPv6%20%7C%20VLAN-success?style=flat-square)](/)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-blue?style=flat-square)](/)
 [![Demo Video](https://img.shields.io/badge/Demo-Video%20Available-red?style=flat-square&logo=youtube)](/)
 
-**NetSimX** is a comprehensive network simulation project showcasing enterprise-grade topology designs, hybrid network architectures, and practical network service implementations. From fundamental topologies to complex hybrid infrastructures with security protocols.
+**NetSimX** is a comprehensive network simulation project for CMPG 325 Computer Networks course, demonstrating practical implementation of network topologies, protocols, and services using Cisco Packet Tracer. This project covers fundamental networking concepts from basic topologies to integrated hybrid networks with enterprise services.
 
 ## 🎯 **Project Highlights**
 
@@ -81,36 +81,36 @@ NetSimX/
 ## 📊 **Implementation Roadmap**
 
 ### Phase 1: Core Topologies (60% Weight)
-- [x] Bus Topology Design & Implementation
-- [x] Mesh Network Architecture
-- [x] Star Configuration Setup
-- [x] Ring Topology Implementation  
-- [x] Extended Star Design
-- [x] Hybrid Integration Architecture
+- [ ] Bus Topology Design & Implementation
+- [ ] Mesh Network Architecture
+- [ ] Star Configuration Setup
+- [ ] Ring Topology Implementation  
+- [ ] Extended Star Design
+- [ ] Hybrid Integration Architecture
 
 ### Phase 2: Network Services (20% Weight)
-- [x] Email Server Configuration
-- [x] Web Server Implementation
-- [x] DNS Service Setup
-- [x] DHCP Implementation
+- [ ] Email Server Configuration
+- [ ] Web Server Implementation
+- [ ] DNS Service Setup
+- [ ] DHCP Implementation
 
 ### Phase 3: Documentation & Demo (20% Weight)
-- [x] Complete IP addressing documentation
-- [x] Configuration notes and guides
-- [x] Video demonstration preparation
-- [x] Testing and validation protocols
+- [ ] Complete IP addressing documentation
+- [ ] Configuration notes and guides
+- [ ] Video demonstration preparation
+- [ ] Testing and validation protocols
 
 ## 📈 **Key Features**
 
 ### 🏗️ **Network Architectures**
-- **Scalable Designs**: From simple bus networks to complex hybrid topologies
-- **Protocol Integration**: Seamless IPv4/IPv6 dual-stack implementation
-- **Enterprise-Ready**: Production-grade configurations with redundancy
+- **Fundamental Designs**: Implementation of core network topologies (Bus, Mesh, Star, Ring, Extended Star)
+- **Protocol Implementation**: IPv4/IPv6 dual-stack configuration and testing
+- **Service Integration**: HTTP/DNS/DHCP server setup and configuration
 
 ### 🔐 **Security Implementation**
-- **VLAN Segmentation**: Network isolation and traffic management
-- **Access Controls**: Basic security protocols and configurations
-- **Service Hardening**: Secure server implementations
+- **VLAN Segmentation**: Network isolation and traffic management implementation
+- **Access Controls**: Basic security protocols and ACL configuration
+- **Network Security**: Fundamental security concepts and best practices
 
 ### 📚 **Comprehensive Documentation**
 - **IP Address Planning**: Detailed subnetting and addressing schemes
@@ -144,15 +144,16 @@ Each topology includes:
 - **Protocol Verification**: IPv4/IPv6, VLAN, and security protocol testing
 - **Performance Analysis**: Network performance and optimization insights
 
-## 🤝 **Contributing**
+## 🤝 **Academic Context**
 
-This project was developed as part of CMPG 325 Computer Networks course requirements. While primarily educational, contributions for improvements and optimizations are welcome.
+This project was developed as an individual semester assignment for CMPG 325 Computer Networks at North-West University. The implementation demonstrates understanding of networking fundamentals, protocol configuration, and network service deployment.
 
-### Development Guidelines
-- Follow Cisco networking best practices
-- Document all configurations thoroughly
-- Include testing validation for implementations
-- Maintain clear commit messages and documentation
+### Learning Objectives
+- Understanding network topology design principles
+- Hands-on experience with Cisco Packet Tracer
+- Implementation of IPv4/IPv6 dual-stack networks
+- Configuration of essential network services
+- Documentation of network implementations
 
 ## 📋 **Project Requirements**
 
@@ -161,19 +162,14 @@ This project was developed as part of CMPG 325 Computer Networks course requirem
 - **Submission Deadline**: 13-October-2025 @23:55
 - **Total Weight**: Network Design (70%) + Services (20%) + Demo (10%)
 
-## 📞 **Support & Contact**
-
-For project-related queries or technical support:
-- 📧 Email: [Your University Email]
-- 🏫 Campus: NWU Mafikeng Campus
-- 📚 Course: CMPG 325 Computer Networks
-
 ## 📄 **License**
 
-This project is created for educational purposes as part of university coursework. All implementations follow Cisco networking standards and best practices.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+This project was created for educational purposes as part of computer science coursework. All implementations follow Cisco networking standards and educational best practices.
 
 ---
 
 **⭐ Star this repository if you find it helpful for learning network topology design and implementation!**
 
-*Built with ❤️ for network engineering education*
+*Built with ❤️ for computer science education*
