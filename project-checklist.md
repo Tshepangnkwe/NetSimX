@@ -164,9 +164,9 @@
 #### User Management
 - [ ] Create email user accounts
   - [ ] admin@netsimx.local
+  - [ ] tshepang@netsimx.local  
   - [ ] user1@netsimx.local
-  - [ ] user2@netsimx.local
-  - [ ] test@netsimx.local
+  - [ ] support@netsimx.local
 - [ ] Set up authentication
 - [ ] Configure mailbox storage
 - [ ] Test user login

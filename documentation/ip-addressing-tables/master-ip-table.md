@@ -3,7 +3,7 @@
 ## NetSimX Project - Complete IP Addressing Scheme
 
 ### Network Overview
-This document contains the complete IP addressing plan for all network topologies in the NetSimX project.
+This document contains my complete IP addressing plan for all network topologies in the NetSimX project.
 
 ---
 

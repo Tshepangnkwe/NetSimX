@@ -7,7 +7,7 @@
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-blue?style=flat-square)](/)
 [![Demo Video](https://img.shields.io/badge/Demo-Video%20Available-red?style=flat-square&logo=youtube)](/)
 
-**NetSimX** is a comprehensive network simulation project for CMPG 325 Computer Networks course, demonstrating practical implementation of network topologies, protocols, and services using Cisco Packet Tracer. This project covers fundamental networking concepts from basic topologies to integrated hybrid networks with enterprise services.
+**NetSimX** is my comprehensive network simulation project for CMPG 325 Computer Networks course. I'm demonstrating practical implementation of network topologies, protocols, and services using Cisco Packet Tracer. This project covers fundamental networking concepts from basic topologies to integrated hybrid networks with enterprise services.
 
 ## 🎯 **Project Highlights**
 
@@ -146,7 +146,7 @@ Each topology includes:
 
 ## 🤝 **Academic Context**
 
-This project was developed as an individual semester assignment for CMPG 325 Computer Networks at North-West University. The implementation demonstrates understanding of networking fundamentals, protocol configuration, and network service deployment.
+This project was developed as my individual semester assignment for CMPG 325 Computer Networks at North-West University. I'm demonstrating my understanding of networking fundamentals, protocol configuration, and network service deployment.
 
 ### Learning Objectives
 - Understanding network topology design principles
@@ -166,7 +166,7 @@ This project was developed as an individual semester assignment for CMPG 325 Com
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project was created for educational purposes as part of computer science coursework. All implementations follow Cisco networking standards and educational best practices.
+I created this project for educational purposes as part of my computer science coursework. All my implementations follow Cisco networking standards and educational best practices.
 
 ---
 

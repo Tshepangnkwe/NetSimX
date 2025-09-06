@@ -347,8 +347,8 @@ ip dhcp pool VLAN20
 ✅ **Documentation Complete**: All required documentation created  
 ✅ **Demonstration Ready**: Video and presentation materials prepared  
 
-**This hybrid topology represents the culmination of your CMPG 325 project, demonstrating mastery of network design, implementation, and integration concepts.**
+**This hybrid topology represents the culmination of my CMPG 325 project, showing my mastery of network design, implementation, and integration concepts.**
 
 ---
-*Part of NetSimX - CMPG 325 Computer Networks Project*
-*Hybrid Integration - Final Implementation (Maximum Marks Potential)*
+*Part of my NetSimX - CMPG 325 Computer Networks Project*
+*Hybrid Integration - My Final Implementation*

@@ -43,13 +43,11 @@ smtp domain netsimx.local
 ```
 
 ### 3. User Account Creation
-Create test email accounts:
+Create email accounts for my project:
 - admin@netsimx.local
-- user1@netsimx.local  
-- user2@netsimx.local
-- test@netsimx.local
-
-### 4. Client Configuration
+- tshepang@netsimx.local
+- user1@netsimx.local
+- support@netsimx.local### 4. Client Configuration
 Configure email clients on workstations:
 - **Incoming Mail Server**: 192.168.100.10
 - **Outgoing Mail Server**: 192.168.100.10
