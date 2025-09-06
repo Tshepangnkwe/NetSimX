@@ -1,24 +1,24 @@
-# Email Server Configuration
+# 📧 My Email Server Configuration
 
-## Overview
-This section covers the implementation of an email server as part of the Individual Network Feature Configuration requirement (Part II - 20% weight).
+## What I'm Implementing
+This is my email server setup for Part II of the CMPG 325 project (worth 20% of my grade). I'm learning how to configure a complete email system from scratch!
 
-## Server Specifications
+## My Server Setup Requirements
 
-### Hardware Requirements (Packet Tracer)
-- **Device Type**: Server-PT
-- **Services**: SMTP, POP3, IMAP (if available)
-- **Operating System**: Cisco IOS (simulated)
-- **RAM**: 512MB minimum
-- **Storage**: 1GB minimum
+### What Hardware I'm Using in Packet Tracer
+- **Device Type**: Server-PT (this is what I'll drag into my topology)
+- **Services**: SMTP, POP3, and IMAP if Packet Tracer supports it
+- **Operating System**: Cisco IOS simulation
+- **RAM**: 512MB minimum (I'll check this in the server properties)
+- **Storage**: 1GB minimum for storing emails
 
-### Network Configuration
+### How I'm Configuring the Network
 
-#### Server IP Configuration
-- **IPv4 Address**: 192.168.100.10
+#### My Server's IP Configuration
+- **IPv4 Address**: 192.168.100.10 (this will be my email server's address)
 - **Subnet Mask**: 255.255.255.0
-- **Default Gateway**: 192.168.100.1
-- **DNS Server**: 192.168.100.1
+- **Default Gateway**: 192.168.100.1 (so it can reach other networks)
+- **DNS Server**: 192.168.100.1 (for resolving domain names)
 
 #### Email Server Settings
 - **SMTP Port**: 25

@@ -1,7 +1,7 @@
 # Bus Topology Implementation
 
 ## Overview
-Bus topology is a network architecture where all devices are connected to a single shared communication line (backbone cable). This implementation demonstrates fundamental networking concepts with modern protocols.
+For my first topology, I'm implementing a bus network where all devices connect to a single shared backbone. This setup helps me understand how older networks worked and demonstrates important concepts like collision domains and shared bandwidth that we covered in class.
 
 ## Network Design
 
@@ -41,10 +41,11 @@ Bus topology is a network architecture where all devices are connected to a sing
 ## Implementation Steps
 
 ### 1. Physical Layout
+Based on my research and the assignment requirements, here's how I'm setting this up:
 1. Open Cisco Packet Tracer
-2. Place 5-6 generic PCs in a linear arrangement
-3. Connect using straight-through cables to simulate bus backbone
-4. Add hub/repeater if needed for signal amplification
+2. Place 5 PCs in a straight line to simulate the bus layout
+3. Use a hub to simulate the shared backbone cable
+4. Connect everything with straight-through cables
 
 ### 2. Device Configuration
 
@@ -127,4 +128,4 @@ After completing this topology:
 5. Update main project documentation
 
 ---
-*Part of NetSimX - CMPG 325 Computer Networks Project*
+*This is part of my NetSimX project for the Computer Networks course. Each topology teaches me different networking concepts that I'll need as a CS student.*
