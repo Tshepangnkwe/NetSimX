@@ -7,7 +7,89 @@
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-blue?style=flat-square)](/)
 [![Demo Video](https://img.shields.io/badge/Demo-Video%20Available-red?style=flat-square&logo=youtube)](/)
 
-**NetSimX** is my comprehensive network simulation project for CMPG 325 Computer Networks course. I'm demonstrating practical implementation of network topologies, protocols, and services using Cisco Packet Tracer. This project covers fundamental networking concepts from basic topologies to integrated hybrid networks with enterprise services.
+# 🌐 NetSimX - My Computer Networks Project
+
+**NetSimX** is my comprehensive network simulation project for CMPG 325 Computer Networks course. I'm demonstrating practical implementation of network topologies, protocols, and services using Cisco Packet Tracer.
+
+## 📋 Project Overview
+
+This project covers 6 network topologies plus email server implementation:
+
+### 🏗️ Phase 1: Network Topologies (60 marks)
+1. **Bus Topology** - Shared backbone network
+2. **Mesh Topology** - Full mesh with OSPF routing  
+3. **Star Topology** - Central switch with VLANs
+4. **Ring Topology** - Ring switches with Spanning Tree
+5. **Extended Star** - Hierarchical network design
+6. **Hybrid Integration** - All topologies connected
+
+### 📧 Phase 2: Network Services (40 marks)
+- **Email Server** - SMTP, POP3, IMAP with DNS integration
+
+## 🚀 Getting Started
+
+📖 **[Complete Implementation Guide](IMPLEMENTATION.md)** - Everything you need to build this project
+
+📊 **[IP Address Tables](documentation/ip-addresses.md)** - All network addressing schemes
+
+📁 **[Packet Tracer Files](packet-tracer-files/)** - Final .pkt files for submission
+
+## 📁 Repository Structure
+
+```
+NetSimX/
+├── README.md                 # This overview
+├── IMPLEMENTATION.md         # Complete step-by-step guide
+├── packet-tracer-files/      # All .pkt files
+├── documentation/            # IP tables and testing results
+├── screenshots/              # Visual documentation
+└── LICENSE                   # MIT License
+```
+
+## 🎯 Project Requirements
+
+- **Course**: CMPG 325 Computer Networks (NWU)
+- **Worth**: 100 marks total
+- **Due Date**: October 13, 2025
+- **Deliverables**: 6 .pkt files + 15-30 minute video demonstration
+- **Tool**: Cisco Packet Tracer (latest version)
+
+## 🛠️ Technologies Used
+
+- **Simulation**: Cisco Packet Tracer
+- **Protocols**: IPv4/IPv6, OSPF, SMTP, POP3, DNS, DHCP
+- **Network Devices**: Routers, Switches, Hubs, Servers, PCs
+- **VLANs**: Network segmentation and inter-VLAN routing
+- **Services**: Email server with DNS integration
+
+## 📈 Implementation Timeline
+
+- **Week 1**: Bus, Star, Ring topologies
+- **Week 2**: Mesh, Extended Star topologies  
+- **Week 3**: Hybrid integration + Email server
+- **Week 4**: Video demonstration + final submission
+
+## 🎓 Learning Outcomes
+
+Through this project, I'm demonstrating understanding of:
+- Network topology design and implementation
+- Routing protocols (OSPF) and switching concepts
+- VLAN configuration and inter-VLAN routing
+- Network services (Email, DNS, DHCP)
+- Network troubleshooting and testing
+- Professional documentation and presentation
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📧 Contact
+
+This project was created as my individual semester assignment for CMPG 325 Computer Networks at North-West University. I created this project for educational purposes as part of my computer science coursework.
+
+---
+
+⭐ **Ready to implement?** Start with the **[Implementation Guide](IMPLEMENTATION.md)** for complete step-by-step instructions!
 
 ## 🎯 **Project Highlights**
 
