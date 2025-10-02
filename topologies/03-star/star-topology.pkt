@@ -1,0 +1,7 @@
+# Star Topology Packet Tracer File
+# This file will contain the star topology implementation
+# To be created in Cisco Packet Tracer
+
+# VLANs: 10 (Sales), 20 (IT), 30 (Guest)
+# Devices: 1 Switch + 6 PCs
+# Purpose: Demonstrate centralized switching with VLANs

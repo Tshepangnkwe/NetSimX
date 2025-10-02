@@ -1,0 +1,8 @@
+# Hybrid Integration Topology Packet Tracer File
+# This file will contain the complete hybrid network
+# To be created in Cisco Packet Tracer
+
+# Integration: All previous topologies connected
+# Routing: OSPF across all segments
+# Networks: All previous networks integrated
+# Purpose: Demonstrate enterprise-scale network

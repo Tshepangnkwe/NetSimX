@@ -3,16 +3,15 @@
 This is my complete step-by-step guide for the CMPG 325 Computer Networks project. Everything I need is here.
 
 ## 📋 Project Summary
-- **Worth**: 100 marks total
 - **Due**: October 13, 2025  
 - **Tool**: Cisco Packet Tracer
 - **Files**: 6 .pkt files + video demo
 
 ---
 
-# 🏗️ PHASE 1: NETWORK TOPOLOGIES (60 marks)
+# 🏗️ PHASE 1: NETWORK TOPOLOGIES
 
-## 1. Bus Topology (8 marks) - 2 hours
+## 1. Bus Topology - 2 hours
 
 **What I'm building**: 5 PCs connected through a hub (simulating bus backbone)
 
@@ -38,7 +37,7 @@ This is my complete step-by-step guide for the CMPG 325 Computer Networks projec
 
 ---
 
-## 2. Mesh Topology (12 marks) - 4 hours
+## 2. Mesh Topology - 4 hours
 
 **What I'm building**: 4 routers in full mesh with OSPF routing
 
@@ -69,7 +68,7 @@ network 10.1.0.0 0.0.255.255 area 0
 
 ---
 
-## 3. Star Topology (10 marks) - 3 hours
+## 3. Star Topology - 3 hours
 
 **What I'm building**: Central switch with 6 PCs in different VLANs
 
@@ -108,7 +107,7 @@ switchport access vlan 10
 
 ---
 
-## 4. Ring Topology (10 marks) - 3 hours
+## 4. Ring Topology - 3 hours
 
 **What I'm building**: 4 switches in ring with Spanning Tree Protocol
 
@@ -129,7 +128,7 @@ spanning-tree mode pvst
 
 ---
 
-## 5. Extended Star (10 marks) - 4 hours
+## 5. Extended Star - 4 hours
 
 **What I'm building**: Core switch connected to 3 access switches with inter-VLAN routing
 
@@ -162,7 +161,7 @@ no shutdown
 
 ---
 
-## 6. Hybrid Integration (10 marks) - 6 hours
+## 6. Hybrid Integration - 6 hours
 
 **What I'm building**: All previous topologies connected via routers
 
@@ -179,7 +178,7 @@ no shutdown
 
 ---
 
-# 📧 PHASE 2: EMAIL SERVER (40 marks)
+# 📧 PHASE 2: EMAIL SERVER
 
 ## What I'm Building
 Complete email system with SMTP, POP3, and DNS integration

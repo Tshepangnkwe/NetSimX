@@ -15,41 +15,56 @@
 
 This project covers 6 network topologies plus email server implementation:
 
-### 🏗️ Phase 1: Network Topologies (60 marks)
-1. **Bus Topology** - Shared backbone network
-2. **Mesh Topology** - Full mesh with OSPF routing  
-3. **Star Topology** - Central switch with VLANs
-4. **Ring Topology** - Ring switches with Spanning Tree
-5. **Extended Star** - Hierarchical network design
-6. **Hybrid Integration** - All topologies connected
+### 🏗️ Phase 1: Network Topologies
+1. **[Bus Topology](topologies/01-bus/)** - Shared backbone network
+2. **[Mesh Topology](topologies/02-mesh/)** - Full mesh with OSPF routing  
+3. **[Star Topology](topologies/03-star/)** - Central switch with VLANs
+4. **[Ring Topology](topologies/04-ring/)** - Ring switches with Spanning Tree
+5. **[Extended Star](topologies/05-extended-star/)** - Hierarchical network design
+6. **[Hybrid Integration](topologies/06-hybrid/)** - All topologies connected
 
-### 📧 Phase 2: Network Services (40 marks)
-- **Email Server** - SMTP, POP3, IMAP with DNS integration
+### 📧 Phase 2: Network Services
+- **[Email Server](services/)** - SMTP, POP3, IMAP with DNS integration
 
 ## 🚀 Getting Started
 
-📖 **[Complete Implementation Guide](IMPLEMENTATION.md)** - Everything you need to build this project
+📖 **[Complete Implementation Guide](docs/implementation-guide.md)** - Everything you need to build this project
 
-📊 **[IP Address Tables](documentation/ip-addresses.md)** - All network addressing schemes
+📊 **[IP Address Tables](docs/ip-addressing.md)** - All network addressing schemes
 
-📁 **[Packet Tracer Files](packet-tracer-files/)** - Final .pkt files for submission
+✅ **[Testing Checklist](docs/testing-checklist.md)** - Verification procedures
+
+🎬 **[Video Script](docs/video-script.md)** - Demo presentation guide
 
 ## 📁 Repository Structure
 
 ```
 NetSimX/
 ├── README.md                 # This overview
-├── IMPLEMENTATION.md         # Complete step-by-step guide
-├── packet-tracer-files/      # All .pkt files
-├── documentation/            # IP tables and testing results
-├── screenshots/              # Visual documentation
-└── LICENSE                   # MIT License
+├── docs/                     # All documentation
+│   ├── implementation-guide.md
+│   ├── ip-addressing.md
+│   ├── testing-checklist.md
+│   └── video-script.md
+├── topologies/              # Individual topology implementations
+│   ├── 01-bus/
+│   ├── 02-mesh/
+│   ├── 03-star/
+│   ├── 04-ring/
+│   ├── 05-extended-star/
+│   └── 06-hybrid/
+├── services/                # Network services
+│   ├── email-server.pkt
+│   └── email-config.md
+├── screenshots/             # Visual documentation
+│   ├── topology-diagrams/
+│   └── test-results/
+└── LICENSE                  # MIT License
 ```
 
 ## 🎯 Project Requirements
 
 - **Course**: CMPG 325 Computer Networks (NWU)
-- **Worth**: 100 marks total
 - **Due Date**: October 13, 2025
 - **Deliverables**: 6 .pkt files + 15-30 minute video demonstration
 - **Tool**: Cisco Packet Tracer (latest version)
@@ -89,7 +104,7 @@ This project was created as my individual semester assignment for CMPG 325 Compu
 
 ---
 
-⭐ **Ready to implement?** Start with the **[Implementation Guide](IMPLEMENTATION.md)** for complete step-by-step instructions!
+⭐ **Ready to implement?** Start with the **[Implementation Guide](docs/implementation-guide.md)** for complete step-by-step instructions!
 
 ## 🎯 **Project Highlights**
 
@@ -162,7 +177,7 @@ NetSimX/
 
 ## 📊 **Implementation Roadmap**
 
-### Phase 1: Core Topologies (60% Weight)
+### Phase 1: Core Topologies
 - [ ] Bus Topology Design & Implementation
 - [ ] Mesh Network Architecture
 - [ ] Star Configuration Setup
@@ -170,13 +185,13 @@ NetSimX/
 - [ ] Extended Star Design
 - [ ] Hybrid Integration Architecture
 
-### Phase 2: Network Services (20% Weight)
+### Phase 2: Network Services
 - [ ] Email Server Configuration
 - [ ] Web Server Implementation
 - [ ] DNS Service Setup
 - [ ] DHCP Implementation
 
-### Phase 3: Documentation & Demo (20% Weight)
+### Phase 3: Documentation & Demo
 - [ ] Complete IP addressing documentation
 - [ ] Configuration notes and guides
 - [ ] Video demonstration preparation
@@ -239,10 +254,9 @@ This project was developed as my individual semester assignment for CMPG 325 Com
 
 ## 📋 **Project Requirements**
 
-- **Individual Semester Project**: CMPG 325 (100 Marks)
+- **Individual Semester Project**: CMPG 325
 - **Institution**: North-West University, Faculty of Natural & Agricultural Science
 - **Submission Deadline**: 13-October-2025 @23:55
-- **Total Weight**: Network Design (70%) + Services (20%) + Demo (10%)
 
 ## 📄 **License**
 

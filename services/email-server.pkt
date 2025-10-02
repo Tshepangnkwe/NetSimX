@@ -1,0 +1,9 @@
+# Email Server Packet Tracer File
+# This file will contain the complete email system implementation
+# To be created in Cisco Packet Tracer
+
+# Components:
+# - DNS Server (192.168.100.30)
+# - Email Server (192.168.100.10) with SMTP/POP3
+# - Email clients for testing
+# Purpose: Demonstrate network services integration

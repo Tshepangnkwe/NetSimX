@@ -1,0 +1,8 @@
+# Extended Star Topology Packet Tracer File
+# This file will contain the extended star topology implementation
+# To be created in Cisco Packet Tracer
+
+# Architecture: Core switch + 3 Access switches
+# VLANs: 10 (Floor1), 20 (Floor2), 30 (Floor3)
+# Routing: Inter-VLAN routing on core switch
+# Purpose: Demonstrate hierarchical network design
