@@ -1,0 +1,6 @@
+# Bus Topology Packet Tracer File
+# This file contains the bus topology network simulation
+# To be created in Cisco Packet Tracer (.pkt format)
+# 
+# Description: Simple bus topology with multiple devices connected to a single backbone cable
+# Features: Basic connectivity, collision domains, shared bandwidth demonstration

@@ -1,0 +1,75 @@
+# Core Switch Configuration
+# NetSimX Project - Layer 3 Core Switch
+
+hostname CoreSwitch
+!
+enable secret cisco123
+!
+# Configure VLANs
+vlan 1
+ name Management
+!
+vlan 10
+ name Sales
+!
+vlan 20
+ name HR
+!
+vlan 30
+ name IT
+!
+vlan 100
+ name Servers
+!
+vlan 200
+ name DMZ
+!
+vlan 300
+ name Guest
+!
+# Configure SVI interfaces
+interface vlan 1
+ ip address 192.168.1.10 255.255.255.0
+ no shutdown
+!
+interface vlan 10
+ ip address 192.168.10.2 255.255.255.0
+ no shutdown
+!
+interface vlan 20
+ ip address 192.168.20.2 255.255.255.0
+ no shutdown
+!
+interface vlan 30
+ ip address 192.168.30.2 255.255.255.0
+ no shutdown
+!
+interface vlan 100
+ ip address 192.168.100.2 255.255.255.0
+ no shutdown
+!
+# Configure trunk ports
+interface GigabitEthernet0/1
+ description Trunk to Distribution Switch
+ switchport mode trunk
+ switchport trunk allowed vlan all
+!
+interface GigabitEthernet0/2
+ description Trunk to Access Switch 1
+ switchport mode trunk
+ switchport trunk allowed vlan 1,10,20
+!
+interface GigabitEthernet0/3
+ description Trunk to Access Switch 2
+ switchport mode trunk
+ switchport trunk allowed vlan 1,30,100
+!
+# Spanning Tree Protocol configuration
+spanning-tree mode rapid-pvst
+spanning-tree vlan 1,10,20,30,100 root primary
+!
+# IP routing
+ip routing
+!
+end
+copy running-config startup-config

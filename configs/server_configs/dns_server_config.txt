@@ -1,0 +1,48 @@
+# DNS Server Configuration
+# NetSimX Project - Primary DNS Server Configuration
+
+# Server: DNS-Server-01
+# OS: Windows Server 2019 / Linux
+# IP Address: 192.168.100.10
+# Role: Primary DNS Server
+
+## DNS Zone Configuration
+
+### Forward Lookup Zones
+# Primary Zone: netsimx.local
+# - A Records:
+#   www.netsimx.local -> 192.168.100.20 (Web Server)
+#   mail.netsimx.local -> 192.168.100.30 (Mail Server)
+#   ftp.netsimx.local -> 192.168.100.40 (FTP Server)
+#   dns.netsimx.local -> 192.168.100.10 (This Server)
+
+### Reverse Lookup Zones
+# 192.168.100.x subnet
+# 192.168.10.x subnet (Sales)
+# 192.168.20.x subnet (HR)
+# 192.168.30.x subnet (IT)
+
+## DNS Forwarders
+# External DNS: 8.8.8.8, 8.8.4.4 (Google DNS)
+# Backup DNS: 1.1.1.1, 1.0.0.1 (Cloudflare DNS)
+
+## Security Settings
+# - Recursion enabled for internal networks only
+# - DNS cache poisoning protection enabled
+# - Secure zone transfers to secondary DNS only
+
+## Windows Server Configuration Commands
+# Add-DnsServerPrimaryZone -Name "netsimx.local" -ZoneFile "netsimx.local.dns"
+# Add-DnsServerResourceRecordA -ZoneName "netsimx.local" -Name "www" -IPv4Address "192.168.100.20"
+# Add-DnsServerResourceRecordA -ZoneName "netsimx.local" -Name "mail" -IPv4Address "192.168.100.30"
+
+## Linux BIND Configuration (/etc/bind/named.conf.local)
+# zone "netsimx.local" {
+#     type master;
+#     file "/etc/bind/db.netsimx.local";
+# };
+
+## Service Configuration
+# - Service: DNS Server (53/UDP, 53/TCP)
+# - Auto-start: Enabled
+# - Logging: Enabled for troubleshooting

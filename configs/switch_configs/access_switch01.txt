@@ -1,0 +1,57 @@
+# Access Switch Configuration
+# NetSimX Project - Access Layer Switch for End Devices
+
+hostname AccessSwitch01
+!
+enable secret cisco123
+!
+# Configure VLANs
+vlan 1
+ name Management
+!
+vlan 10
+ name Sales
+!
+vlan 20
+ name HR
+!
+# Configure access ports for Sales department
+interface range FastEthernet0/1-12
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+# Configure access ports for HR department
+interface range FastEthernet0/13-24
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+# Configure trunk port to Core Switch
+interface GigabitEthernet0/1
+ description Trunk to Core Switch
+ switchport mode trunk
+ switchport trunk allowed vlan 1,10,20
+!
+# Management interface
+interface vlan 1
+ ip address 192.168.1.11 255.255.255.0
+ no shutdown
+!
+ip default-gateway 192.168.1.1
+!
+# Port security configuration
+interface range FastEthernet0/1-24
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+!
+# Spanning Tree Protocol
+spanning-tree mode rapid-pvst
+spanning-tree vlan 1,10,20 root secondary
+!
+end
+copy running-config startup-config

@@ -1,0 +1,97 @@
+# Email Server Configuration
+# NetSimX Project - Exchange/Postfix Mail Server Configuration
+
+# Server: MAIL-Server-01
+# OS: Windows Server 2019 (Exchange) / Ubuntu Server (Postfix)
+# IP Address: 192.168.100.30
+# Role: Email Server (SMTP, POP3, IMAP)
+
+## Exchange Server Configuration (Windows)
+### Organization Settings
+# - Organization Name: NetSimX Communications
+# - Exchange Version: Exchange Server 2019
+# - Database Location: D:\Exchange\Mailbox\DB01
+
+### Mailbox Database Configuration
+# - Database Name: NetSimX-Mailbox-DB01
+# - Log File Path: D:\Exchange\Logs\
+# - Circular Logging: Disabled
+# - Maintenance Schedule: Daily 2:00 AM - 6:00 AM
+
+### Receive Connectors
+# - Internal SMTP: Port 25 (internal networks)
+# - External SMTP: Port 25 (internet)
+# - Authenticated SMTP: Port 587 (clients)
+
+### Send Connectors
+# - Internet Send Connector
+# - Smart Host: mail.netsimx.local
+# - DNS routing enabled
+
+## Postfix Configuration (Linux)
+### /etc/postfix/main.cf
+
+# myhostname = mail.netsimx.local
+# mydomain = netsimx.local
+# myorigin = $mydomain
+# inet_interfaces = all
+# inet_protocols = ipv4
+# mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+# mynetworks = 192.168.0.0/16, 127.0.0.0/8
+# home_mailbox = Maildir/
+
+### Virtual Domains Configuration
+# virtual_mailbox_domains = netsimx.local
+# virtual_mailbox_base = /var/mail/vhosts
+# virtual_mailbox_maps = hash:/etc/postfix/vmailbox
+# virtual_minimum_uid = 1000
+# virtual_uid_maps = static:5000
+# virtual_gid_maps = static:5000
+
+## User Accounts
+### Department Email Accounts
+# - admin@netsimx.local (IT Administrator)
+# - sales@netsimx.local (Sales Team)
+# - hr@netsimx.local (Human Resources)
+# - support@netsimx.local (Technical Support)
+
+### Distribution Lists
+# - all@netsimx.local (All employees)
+# - management@netsimx.local (Management team)
+# - it-team@netsimx.local (IT Department)
+
+## Security Configuration
+### SSL/TLS Configuration
+# - Certificate: mail.netsimx.local
+# - SMTPS: Port 465 (SSL)
+# - STARTTLS: Port 587 (TLS)
+# - IMAPS: Port 993 (SSL)
+# - POP3S: Port 995 (SSL)
+
+### Anti-Spam Configuration
+# - SPF Records: Configured in DNS
+# - DKIM: Domain keys configured
+# - DMARC: Policy configured
+# - Spam filtering: Enabled
+
+## Client Access Services
+### IMAP Configuration
+# - Port: 143 (non-SSL), 993 (SSL)
+# - Max connections per user: 10
+# - Idle timeout: 30 minutes
+
+### POP3 Configuration
+# - Port: 110 (non-SSL), 995 (SSL)
+# - Max connections per user: 5
+# - Login delay: 30 seconds
+
+### Webmail Access
+# - URL: https://mail.netsimx.local/owa
+# - Authentication: Integrated Windows Auth
+# - Mobile device support: Enabled
+
+## Backup and Maintenance
+# - Full backup: Daily at 11:00 PM
+# - Incremental backup: Every 4 hours
+# - Log file retention: 30 days
+# - Mailbox retention: 365 days

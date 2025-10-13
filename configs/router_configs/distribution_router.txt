@@ -1,0 +1,46 @@
+# Distribution Router Configuration
+# NetSimX Project - Distribution Layer Router
+
+hostname DistributionRouter
+!
+enable secret cisco123
+!
+# Configure interfaces
+interface GigabitEthernet0/0
+ description Connection to Core Router
+ ip address 192.168.1.2 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/1
+ description Connection to Access Layer Switch
+ ip address 192.168.50.1 255.255.255.0
+ no shutdown
+!
+# OSPF configuration
+router ospf 1
+ router-id 2.2.2.2
+ network 192.168.1.0 0.0.0.255 area 0
+ network 192.168.50.0 0.0.0.255 area 1
+!
+# DHCP pools for different VLANs
+ip dhcp excluded-address 192.168.10.1 192.168.10.9
+ip dhcp excluded-address 192.168.20.1 192.168.20.9
+ip dhcp excluded-address 192.168.30.1 192.168.30.9
+!
+ip dhcp pool SALES
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 192.168.100.10
+!
+ip dhcp pool HR
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 192.168.100.10
+!
+ip dhcp pool IT
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ dns-server 192.168.100.10
+!
+end
+copy running-config startup-config

@@ -1,0 +1,68 @@
+# Web Server Configuration
+# NetSimX Project - Apache/IIS Web Server Configuration
+
+# Server: WEB-Server-01
+# OS: Windows Server 2019 / Ubuntu Server
+# IP Address: 192.168.100.20
+# Role: Web Server (Apache/IIS)
+
+## Apache Configuration (Linux)
+### /etc/apache2/sites-available/netsimx.local.conf
+
+# <VirtualHost *:80>
+#     ServerName www.netsimx.local
+#     ServerAlias netsimx.local
+#     DocumentRoot /var/www/netsimx
+#     ErrorLog ${APACHE_LOG_DIR}/netsimx_error.log
+#     CustomLog ${APACHE_LOG_DIR}/netsimx_access.log combined
+# 
+#     <Directory /var/www/netsimx>
+#         Options Indexes FollowSymLinks
+#         AllowOverride All
+#         Require all granted
+#     </Directory>
+# </VirtualHost>
+
+## IIS Configuration (Windows)
+### Web Site Configuration
+# - Site Name: NetSimX Corporate Site
+# - Physical Path: C:\inetpub\wwwroot\netsimx
+# - Port: 80 (HTTP), 443 (HTTPS)
+# - Host Header: www.netsimx.local
+
+## SSL Certificate Configuration
+# - Certificate: Self-signed for netsimx.local
+# - SSL Protocols: TLS 1.2, TLS 1.3
+# - Cipher Suites: Strong encryption only
+
+## Content Configuration
+### Default Pages
+# - index.html: Company homepage
+# - about.html: About NetSimX
+# - contact.html: Contact information
+# - services.html: Network services overview
+
+### Directory Structure
+# /var/www/netsimx/ (Linux) or C:\inetpub\wwwroot\netsimx\ (Windows)
+# ├── index.html
+# ├── css/
+# │   └── style.css
+# ├── js/
+# │   └── main.js
+# ├── images/
+# │   └── logo.png
+# └── downloads/
+#     └── network_topology_diagrams.pdf
+
+## Security Configuration
+# - HTTP to HTTPS redirect enabled
+# - Directory browsing disabled
+# - Server signature hidden
+# - Request filtering enabled
+# - Rate limiting configured
+
+## Monitoring and Logging
+# - Access logs: /var/log/apache2/access.log
+# - Error logs: /var/log/apache2/error.log
+# - Performance monitoring enabled
+# - Log rotation configured

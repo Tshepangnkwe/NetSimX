@@ -1,0 +1,59 @@
+# Router Configuration Template - Core Router
+# NetSimX Project - Main Core Router Configuration
+
+hostname CoreRouter
+!
+enable secret cisco123
+!
+# Configure interfaces
+interface GigabitEthernet0/0
+ description WAN Connection to ISP
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+!
+interface GigabitEthernet0/1
+ description LAN Connection to Core Switch
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+!
+# VLAN routing configuration
+interface GigabitEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ description Sales VLAN
+!
+interface GigabitEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ description HR VLAN
+!
+interface GigabitEthernet0/1.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+ description IT VLAN
+!
+# OSPF routing protocol
+router ospf 1
+ router-id 1.1.1.1
+ network 192.168.0.0 0.0.255.255 area 0
+ network 203.0.113.0 0.0.0.3 area 0
+!
+# Access control and security
+ip access-list extended BLOCK_P2P
+ deny tcp any any eq 4662
+ deny tcp any any eq 6881
+ permit ip any any
+!
+# NAT configuration
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+access-list 1 permit 192.168.0.0 0.0.255.255
+!
+interface GigabitEthernet0/1
+ ip nat inside
+!
+interface GigabitEthernet0/0
+ ip nat outside
+!
+# Save configuration
+end
+copy running-config startup-config

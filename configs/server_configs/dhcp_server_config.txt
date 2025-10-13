@@ -1,0 +1,135 @@
+# DHCP Server Configuration
+# NetSimX Project - Windows DHCP / ISC DHCP Server Configuration
+
+# Server: DHCP-Server-01
+# OS: Windows Server 2019 / Ubuntu Server
+# IP Address: 192.168.100.40
+# Role: DHCP Server for all network segments
+
+## Windows DHCP Server Configuration
+### Scope Configuration
+
+#### Management Scope (VLAN 1)
+# - Scope Name: Management-Network
+# - Start IP: 192.168.1.50
+# - End IP: 192.168.1.100
+# - Subnet Mask: 255.255.255.0
+# - Default Gateway: 192.168.1.1
+# - DNS Servers: 192.168.100.10, 8.8.8.8
+# - Lease Duration: 8 days
+
+#### Sales Department Scope (VLAN 10)
+# - Scope Name: Sales-Department
+# - Start IP: 192.168.10.50
+# - End IP: 192.168.10.200
+# - Subnet Mask: 255.255.255.0
+# - Default Gateway: 192.168.10.1
+# - DNS Servers: 192.168.100.10
+# - Lease Duration: 24 hours
+
+#### HR Department Scope (VLAN 20)
+# - Scope Name: HR-Department
+# - Start IP: 192.168.20.50
+# - End IP: 192.168.20.200
+# - Subnet Mask: 255.255.255.0
+# - Default Gateway: 192.168.20.1
+# - DNS Servers: 192.168.100.10
+# - Lease Duration: 24 hours
+
+#### IT Department Scope (VLAN 30)
+# - Scope Name: IT-Department
+# - Start IP: 192.168.30.50
+# - End IP: 192.168.30.200
+# - Subnet Mask: 255.255.255.0
+# - Default Gateway: 192.168.30.1
+# - DNS Servers: 192.168.100.10, 8.8.8.8
+# - Lease Duration: 7 days
+
+#### Guest Network Scope (VLAN 300)
+# - Scope Name: Guest-Network
+# - Start IP: 10.0.0.50
+# - End IP: 10.0.0.200
+# - Subnet Mask: 255.255.255.0
+# - Default Gateway: 10.0.0.1
+# - DNS Servers: 8.8.8.8, 8.8.4.4
+# - Lease Duration: 4 hours
+
+## ISC DHCP Server Configuration (Linux)
+### /etc/dhcp/dhcpd.conf
+
+# default-lease-time 86400;
+# max-lease-time 604800;
+# authoritative;
+
+### Management Subnet
+# subnet 192.168.1.0 netmask 255.255.255.0 {
+#   range 192.168.1.50 192.168.1.100;
+#   option routers 192.168.1.1;
+#   option domain-name-servers 192.168.100.10, 8.8.8.8;
+#   option domain-name "netsimx.local";
+#   default-lease-time 691200;
+#   max-lease-time 691200;
+# }
+
+### Sales Department Subnet
+# subnet 192.168.10.0 netmask 255.255.255.0 {
+#   range 192.168.10.50 192.168.10.200;
+#   option routers 192.168.10.1;
+#   option domain-name-servers 192.168.100.10;
+#   option domain-name "sales.netsimx.local";
+# }
+
+### HR Department Subnet
+# subnet 192.168.20.0 netmask 255.255.255.0 {
+#   range 192.168.20.50 192.168.20.200;
+#   option routers 192.168.20.1;
+#   option domain-name-servers 192.168.100.10;
+#   option domain-name "hr.netsimx.local";
+# }
+
+## DHCP Reservations
+### Critical Infrastructure
+# - Core Router: 192.168.1.1 (MAC: 00:1A:2B:3C:4D:5E)
+# - Core Switch: 192.168.1.10 (MAC: 00:1A:2B:3C:4D:5F)
+# - DNS Server: 192.168.100.10 (MAC: 00:1A:2B:3C:4D:60)
+# - Web Server: 192.168.100.20 (MAC: 00:1A:2B:3C:4D:61)
+# - Mail Server: 192.168.100.30 (MAC: 00:1A:2B:3C:4D:62)
+
+### Department Printers
+# - Sales Printer: 192.168.10.10 (MAC: 00:1A:2B:3C:4D:70)
+# - HR Printer: 192.168.20.10 (MAC: 00:1A:2B:3C:4D:71)
+# - IT Printer: 192.168.30.10 (MAC: 00:1A:2B:3C:4D:72)
+
+## DHCP Options Configuration
+### Global Options
+# - Option 3: Default Gateway (Router)
+# - Option 6: DNS Server
+# - Option 15: DNS Domain Name
+# - Option 44: NetBIOS Name Server
+# - Option 46: NetBIOS Node Type
+
+### Custom Options
+# - Option 66: Boot Server Host Name (for PXE boot)
+# - Option 67: Boot File Name
+# - Option 150: TFTP Server Address (for IP phones)
+
+## High Availability Configuration
+### DHCP Failover (Windows)
+# - Failover Relationship Name: NetSimX-Failover
+# - Partner Server: DHCP-Server-02 (192.168.100.41)
+# - Mode: Hot Standby
+# - Role: Primary
+# - Maximum Client Lead Time: 1 hour
+
+## Monitoring and Logging
+### Event Logging
+# - DHCP lease events
+# - DHCP conflicts
+# - Scope utilization alerts
+# - Server performance metrics
+
+### Reporting
+# - Daily lease utilization report
+# - Weekly scope statistics
+# - Monthly DHCP server performance
+# - Quarterly capacity planning report
