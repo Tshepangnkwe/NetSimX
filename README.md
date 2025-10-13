@@ -1,6 +1,6 @@
 # NetSimX
 
-**Network Topology Design and Simulation Project (CPT325 - 2025)**  
+**Network Topology Design and Simulation Project (CMPG325 - 2025)**  
 *Developed using Cisco Packet Tracer*
 
 ## Overview
