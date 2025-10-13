@@ -1,6 +1,0 @@
-# Mesh Topology Packet Tracer File
-# This file contains the mesh topology network simulation
-# To be created in Cisco Packet Tracer (.pkt format)
-#
-# Description: Full mesh network with multiple redundant paths between devices
-# Features: High redundancy, fault tolerance, optimal routing paths

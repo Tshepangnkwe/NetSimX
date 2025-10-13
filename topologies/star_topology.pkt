@@ -1,6 +1,0 @@
-# Star Topology Packet Tracer File
-# This file contains the star topology network simulation
-# To be created in Cisco Packet Tracer (.pkt format)
-#
-# Description: Central hub/switch with devices radiating outward
-# Features: Centralized management, single point of failure demonstration, scalability
